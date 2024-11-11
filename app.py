@@ -201,7 +201,6 @@ def delete_event(event_id):
     event_manager.delete_event(event_id)
     flash('Event deleted!', 'success')
     return redirect(url_for('week_view'))
-with app.app_context():
-    db.create_all()
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
